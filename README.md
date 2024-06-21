@@ -10,11 +10,13 @@ IT CONTAINS ADMIN PANEL I.E DASHBOARD AND BEAUTIFUL PORTFOLIO PAGE AND ALONG WIT
 
 
 HOW TO RUN :
+
             CLONE/DOWNLOAD THE REPOSITORY .
             
             npm install FOR DASHBOARD /PORTFOLIO /BACKEND.
             
             ADD config/config.env FILE TO BACKEND :
+            
                 PORT = 
                 MONGO_URI=
                 PORTFOLIO_URL =
