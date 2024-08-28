@@ -73,8 +73,8 @@ userSchema.methods.comparePassword = async function (enteredPassword){
 };
 
 //jsonwebtoken generation
-userSchema.methods.generateJsonWebToken = function(){
-    return jwt.sign({id : this._id},process.env.JWT_SECRET_KEY,{expiresIn : process.env.JWT_EXPIRES});
+userSchema.methods.generateJsonWebToken = async function(){
+    return await jwt.sign({id : this._id},process.env.JWT_SECRET_KEY,{expiresIn : process.env.JWT_EXPIRES});
 };
 userSchema.methods.getResetPasswordToken = function(){
     const resetToken =crypto.randomBytes(20).toString("hex");
