@@ -38,7 +38,7 @@ export const register = catchAsyncErrors(async (req,res,next)=>{
         facebook_url,
         twitter_url,
         linkedin_url,} = req.body;
-    const user = User.create({
+    const user = await User.create({
             
         fullName,
         email,
