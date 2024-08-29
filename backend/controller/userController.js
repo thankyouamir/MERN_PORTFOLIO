@@ -111,7 +111,7 @@ export const updateProfile =catchAsyncErrors(async(req,res,next)=>{
         instagramURL : req.body.instagramURL,
         facebookURL : req.body.facebookURL,
         twitterURL : req.body.twitterURL,
-        linkedinURL : req.body.linkedinURL,
+        linkedInURL : req.body.linkedInURL,
     };
     if(req.files && req.avatar){
         const avatar =req.body.avatar;
