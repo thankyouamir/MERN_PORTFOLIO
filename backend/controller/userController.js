@@ -84,10 +84,12 @@ export const logout = catchAsyncErrors(async(req,res,next)=>{
     res.status(200).cookie("cookie","",{
         //need to provide same option as it was during token creation otherwise it will not work
         expires : new Date(Date.now()),
-        httpOnly : true
+        httpOnly : true,
+        sameSite : "None",
+        secure : true
     }).json({
         success : true,
-        message : "logout successfully"
+        message : "logout successfully",
     });
 });
 
