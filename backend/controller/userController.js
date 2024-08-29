@@ -32,12 +32,12 @@ export const register = catchAsyncErrors(async (req,res,next)=>{
         phone,
         aboutMe,
         password,
-        portfolio_url,
-        github_url,
-        instagram_url,
-        facebook_url,
-        twitter_url,
-        linkedin_url,} = req.body;
+        portfolioURL,
+        githubURL,
+        instagramURL,
+        facebookURL,
+        twitterURL,
+        linkedInURL,} = req.body;
     const user = await User.create({
             
         fullName,
@@ -45,12 +45,12 @@ export const register = catchAsyncErrors(async (req,res,next)=>{
         phone,
         aboutMe,
         password,
-        portfolio_url,
-        github_url,
-        instagram_url,
-        facebook_url,
-        twitter_url,
-        linkedin_url,
+        portfolioURL,
+        githubURL,
+        instagramURL,
+        facebookURL,
+        twitterURL,
+        linkedInURL,
         avatar :{
             public_id : cloudinaryResponseForAvatar.public_id,
             url : cloudinaryResponseForAvatar.secure_url,
@@ -106,12 +106,12 @@ export const updateProfile =catchAsyncErrors(async(req,res,next)=>{
         phone : req.body.phone,
         aboutMe : req.body.aboutMe,
         
-        portfolio_url : req.body.portfolio_url,
-        github_url : req.body.github_url,
-        instagram_url : req.body.instagram_url,
-        facebook_url : req.body.facebook_url,
-        twitter_url : req.body.twitter_url,
-        linkedin_url : req.body.linkedin_url,
+        portfolioURL : req.body.portfolioURL,
+        githubURL : req.body.githubURL,
+        instagramURL : req.body.instagramURL,
+        facebookURL : req.body.facebookURL,
+        twitterURL : req.body.twitterURL,
+        linkedinURL : req.body.linkedinURL,
     };
     if(req.files && req.avatar){
         const avatar =req.body.avatar;
