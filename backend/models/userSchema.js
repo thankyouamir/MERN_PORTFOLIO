@@ -45,7 +45,7 @@ const userSchema = new mongoose.Schema({
             required : true,
         },
     },
-    portfolio_url :{
+    portfolioURL :{
         type : String,
         required : [true,"url is required"],
     },
